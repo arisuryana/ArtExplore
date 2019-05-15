@@ -97,12 +97,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_pertunjukan) {
-
+            Intent intent = new Intent(MainActivity.this, PertunjukanActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_daerah) {
             Intent intent = new Intent(MainActivity.this, DaerahActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_lokasi) {
-
+            Intent intent = new Intent(MainActivity.this, LokasiActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_tiket) {
 
         } else if (id == R.id.nav_about) {

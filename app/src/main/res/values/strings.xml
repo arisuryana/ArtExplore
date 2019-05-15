@@ -16,4 +16,6 @@
     <string name="menu_lokasi">Lokasi Pertunjukan</string>
     <string name="menu_tiket">Tiket Booking</string>
     <string name="menu_about">About Us</string>
+    <string name="favorite">Detail</string>
+    <string name="share">Pesan Tiket</string>
 </resources>
