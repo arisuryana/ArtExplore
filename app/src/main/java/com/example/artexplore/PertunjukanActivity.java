@@ -50,6 +50,8 @@ public class PertunjukanActivity extends AppCompatActivity {
         PertunjukanAdapter pertunjukanAdapter = new PertunjukanAdapter(this);
         pertunjukanAdapter.setListPertunjukan(list);
         rvCategory2.setAdapter(pertunjukanAdapter);
+
+
     }
 
     @Override
