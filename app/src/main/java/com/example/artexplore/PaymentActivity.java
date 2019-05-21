@@ -3,8 +3,10 @@ package com.example.artexplore;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +22,7 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle extras = getIntent().getExtras();
+        Log.w("myApp","test");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -73,7 +76,7 @@ public class PaymentActivity extends AppCompatActivity {
                     Context context = view.getContext();
                     String totalHarga =
                             Integer.toString(Integer.parseInt(jumlahTiket.getText().toString()) * ticketPrice);
-                    SharedPreferences prefs = context.getSharedPreferences("tiket", 0);
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putString("nama_pembeli",namaPembeli.getText().toString());
                     editor.putString("email_pembeli",emailPembeli.getText().toString());
@@ -82,7 +85,7 @@ public class PaymentActivity extends AppCompatActivity {
                     editor.putString("total_harga",totalHarga);
                     editor.putString("tempat",tempat);
                     editor.putString("tanggal",tanggal);
-                    editor.apply();
+                    editor.commit();
                     Intent intent = new Intent(context, BookingActivity.class);
                     startActivity(intent);
                 }

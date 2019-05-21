@@ -106,7 +106,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, LokasiActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_tiket) {
-
+            Intent intent = new Intent(MainActivity.this, BookingActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_about) {
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
