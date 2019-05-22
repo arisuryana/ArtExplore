@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PertunjukanActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".PertunjukanActivity" />
         <activity android:name=".LokasiActivity" />
         <activity android:name=".DaerahActivity" />
         <activity
