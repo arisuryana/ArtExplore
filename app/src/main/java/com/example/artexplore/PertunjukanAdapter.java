@@ -75,7 +75,7 @@ public class PertunjukanAdapter extends Adapter<PertunjukanAdapter.CardViewViewH
 
     public class CardViewViewHolder extends RecyclerView.ViewHolder {
         public ImageView imgPhoto;
-        public TextView tvJudul, tvLokasi, tvTanggal, tvRegular, tvVIP, tvRemark1, tvRemark2;
+        public TextView tvJudul, tvLokasi, tvTanggal, tvRegular, tvVIP;
         public Button btnDetail, btnTiket;
 
         CardViewViewHolder(View itemView) {
@@ -84,8 +84,6 @@ public class PertunjukanAdapter extends Adapter<PertunjukanAdapter.CardViewViewH
             tvJudul = itemView.findViewById(R.id.tv_item_judul);
             tvLokasi = itemView.findViewById(R.id.tv_item_lokasi);
             tvTanggal = itemView.findViewById(R.id.tv_item_tanggal);
-            tvRemark1 = itemView.findViewById(R.id.tv_item_remarks1);
-            tvRemark2 = itemView.findViewById(R.id.tv_item_remarks2);
             tvRegular = itemView.findViewById(R.id.tv_item_regular);
             tvVIP = itemView.findViewById(R.id.tv_item_vip);
             btnDetail = itemView.findViewById(R.id.btn_set_detail);
