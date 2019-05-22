@@ -27,8 +27,8 @@ public class PaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
         if (extras != null) {
             String nama = extras.getString("nama");
-            String tempat = extras.getString("tempat");
-            String tanggal = extras.getString("tanggal");
+            final String tempat = extras.getString("tempat");
+            final String tanggal = extras.getString("tanggal");
             final String vip = extras.getString("vip");
             final String reg = extras.getString("reguler");
             TextView namaPertunjukan = findViewById(R.id.nama);
@@ -57,7 +57,7 @@ public class PaymentActivity extends AppCompatActivity {
                             break;
                         case R.id.regular:
                             ticketPrice = Integer.parseInt(reg);
-                            ticket = String.format("Regular(IDR %,s)",Integer.parseInt(reg));
+                            ticket = String.format("Regular(IDR %,d)",Integer.parseInt(reg));
                             break;
                     }
                 }
@@ -80,6 +80,8 @@ public class PaymentActivity extends AppCompatActivity {
                     editor.putString("no_telp",noTelp.getText().toString());
                     editor.putString("jumlah_tiket",jumlahTiket.getText().toString());
                     editor.putString("total_harga",totalHarga);
+                    editor.putString("tempat",tempat);
+                    editor.putString("tanggal",tanggal);
                     editor.apply();
                     Intent intent = new Intent(context, BookingActivity.class);
                     startActivity(intent);
