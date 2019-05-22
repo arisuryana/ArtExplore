@@ -1,19 +1,18 @@
 package com.example.artexplore;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
-public class DaerahActivity extends AppCompatActivity {
-    private RecyclerView rvCategory;
-    private ArrayList<Daerah> list = new ArrayList<>();
+public class LokasiActivity extends AppCompatActivity {
+    private RecyclerView rvCategory1;
+    private ArrayList<Lokasi> list = new ArrayList<>();
     final String STATE_TITLE = "state_string";
     final String STATE_LIST = "state_list";
     final String STATE_MODE = "state_mode";
@@ -22,27 +21,26 @@ public class DaerahActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daerah);
+        setContentView(R.layout.activity_lokasi);
 
-        rvCategory = findViewById(R.id.rv_category);
-        rvCategory.setHasFixedSize(true);
+        rvCategory1 = findViewById(R.id.rv_category1);
+        rvCategory1.setHasFixedSize(true);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         if (savedInstanceState == null) {
-            setActionBarTitle("Daerah Pertunjukan");
-            list.addAll(DaerahData.getListData());
+            setActionBarTitle("Lokasi Pertunjukan");
+            list.addAll(LokasiData.getListData());
             showRecyclerGrid();
-            mode = R.id.nav_pertunjukan;
+            mode = R.id.nav_lokasi;
         } else {
             String stateTitle = savedInstanceState.getString(STATE_TITLE);
-            ArrayList<Daerah> stateList = savedInstanceState.getParcelableArrayList(STATE_LIST);
+            ArrayList<Lokasi> stateList = savedInstanceState.getParcelableArrayList(STATE_LIST);
             int stateMode = savedInstanceState.getInt(STATE_MODE);
             setActionBarTitle(stateTitle);
             list.addAll(stateList);
         }
-
     }
 
     private void setActionBarTitle(String title){
@@ -50,27 +48,27 @@ public class DaerahActivity extends AppCompatActivity {
     }
 
     private void showRecyclerGrid(){
-        rvCategory.setLayoutManager(new GridLayoutManager(this, 1));
-        GridDaerahAdapter gridDaerahAdapter = new GridDaerahAdapter(this);
-        gridDaerahAdapter.setListDaerah(list);
-        rvCategory.setAdapter(gridDaerahAdapter);
+        rvCategory1.setLayoutManager(new GridLayoutManager(this, 1));
+        GridLokasiAdapter gridLokasiAdapter = new GridLokasiAdapter(this);
+        gridLokasiAdapter.setListLokasi(list);
+        rvCategory1.setAdapter(gridLokasiAdapter);
 
-        ItemClickSupport.addTo(rvCategory).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+        ItemClickSupport.addTo(rvCategory1).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                showSelectedDaerah(list.get(position));
+                showSelectedLokasi(list.get(position));
             }
         });
     }
 
-    private void showSelectedDaerah(Daerah daerah) {
-        Toast.makeText(this, "Kamu memilih Daerah " + daerah.getNama_daerah(), Toast.LENGTH_SHORT).show();
+    private void showSelectedLokasi(Lokasi lokasi) {
+        Toast.makeText(this, "Kamu memilih Lokasi " + lokasi.getNama_lokasi(), Toast.LENGTH_SHORT).show();
     }
-
 
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
+
 }

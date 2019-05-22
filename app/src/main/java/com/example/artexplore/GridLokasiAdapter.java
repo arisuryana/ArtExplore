@@ -16,35 +16,36 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
-public class GridDaerahAdapter extends Adapter<GridDaerahAdapter.GridViewHolder> {
-    public GridDaerahAdapter(Context context) {
+public class GridLokasiAdapter extends Adapter<GridLokasiAdapter.GridViewHolder> {
+    public GridLokasiAdapter(Context context) {
         this.context = context;
     }
 
     private Context context;
 
-    public ArrayList<Daerah> getListDaerah() {
-        return listDaerah;
+    public ArrayList<Lokasi> getListLokasi() {
+        return listLokasi;
     }
 
-    public void setListDaerah(ArrayList<Daerah> listDaerah) {
-        this.listDaerah = listDaerah;
+    public void setListLokasi(ArrayList<Lokasi> listLokasi) {
+        this.listLokasi = listLokasi;
     }
 
-    private ArrayList<Daerah> listDaerah;
+    private ArrayList<Lokasi> listLokasi;
 
     @NonNull
     @Override
-    public GridDaerahAdapter.GridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grid_daerah, parent, false);
-        return new GridViewHolder(view);
+    public GridLokasiAdapter.GridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grid_lokasi, parent, false);
+        return new GridLokasiAdapter.GridViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull GridViewHolder holder, final int position) {
-        holder.tvName.setText(getListDaerah().get(position).getNama_daerah());
+        holder.tvName.setText(getListLokasi().get(position).getNama_lokasi());
+        holder.tvName2.setText(getListLokasi().get(position).getNama_daerah());
         Glide.with(context)
-                .load(getListDaerah().get(position).getPhoto_daerah())
+                .load(getListLokasi().get(position).getPhoto_lokasi())
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
 
@@ -52,26 +53,26 @@ public class GridDaerahAdapter extends Adapter<GridDaerahAdapter.GridViewHolder>
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PertunjukanActivity.class);
-                intent.putExtra("daerah", getListDaerah().get(position).getNama_daerah());
+                intent.putExtra("lokasi", getListLokasi().get(position).getNama_lokasi());
                 context.startActivity(intent);
-
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return getListDaerah().size();
+        return getListLokasi().size();
     }
 
     public class GridViewHolder extends RecyclerView.ViewHolder {
         public ImageView imgPhoto;
-        public TextView tvName;
+        public TextView tvName, tvName2;
 
         GridViewHolder(View itemView) {
             super(itemView);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.txt_item_name);
+            tvName2 = itemView.findViewById(R.id.txt_item_name2);
         }
     }
 }
