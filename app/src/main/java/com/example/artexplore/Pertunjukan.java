@@ -12,6 +12,7 @@ public class Pertunjukan implements Parcelable {
     private String harga_reg;
     private String harga_vip;
     private String deskripsi;
+    private String shortDeskripsi;
 
     public String getJudul() {
         return judul;
@@ -77,6 +78,15 @@ public class Pertunjukan implements Parcelable {
         this.deskripsi = deskripsi;
     }
 
+
+    public String getShortDeskripsi() {
+        return shortDeskripsi;
+    }
+
+    public void setShortDeskripsi(String shortDeskripsi) {
+        this.shortDeskripsi = shortDeskripsi;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -92,6 +102,7 @@ public class Pertunjukan implements Parcelable {
         dest.writeString(this.harga_reg);
         dest.writeString(this.harga_vip);
         dest.writeString(this.deskripsi);
+        dest.writeString(this.shortDeskripsi);
     }
 
     public Pertunjukan(){
@@ -107,6 +118,7 @@ public class Pertunjukan implements Parcelable {
         this.harga_reg = in.readString();
         this.harga_vip = in.readString();
         this.deskripsi = in.readString();
+        this.shortDeskripsi = in.readString();
     }
 
     public static final Parcelable.Creator<Pertunjukan> CREATOR = new Creator<Pertunjukan>() {
