@@ -27,6 +27,8 @@ public class PaymentActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        setActionBarTitle("Booking Tiket");
+
         setContentView(R.layout.activity_payment);
         if (extras != null) {
             String nama = extras.getString("nama");
@@ -98,5 +100,9 @@ public class PaymentActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    private void setActionBarTitle(String title){
+        getSupportActionBar().setTitle(title);
     }
 }

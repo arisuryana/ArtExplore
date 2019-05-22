@@ -45,13 +45,15 @@
                         android:id="@+id/vip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="VIP Ticket \n(IDR 500.000)" />
+                        android:text="VIP Ticket \n(IDR 500.000)"
+                        android:fontFamily="@font/signika_regular"/>
 
                     <RadioButton
                         android:id="@+id/regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Regular Ticket \n (IDR 230.000)" />
+                        android:text="Regular Ticket \n (IDR 230.000)"
+                        android:fontFamily="@font/signika_regular"/>
 
                 </RadioGroup>
 
@@ -68,13 +70,15 @@
                         android:id="@+id/radio4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kartu Kredit" />
+                        android:text="Kartu Kredit"
+                        android:fontFamily="@font/signika_regular"/>
 
                     <RadioButton
                         android:id="@+id/radio3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bayar di Indomaret" />
+                        android:text="Bayar di Indomaret"
+                        android:fontFamily="@font/signika_regular"/>
 
                 </RadioGroup>
 
@@ -88,7 +92,8 @@
                     android:textColor="@android:color/black"
                     android:textSize="19dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/signika_regular"/>
 
                 <EditText
                     android:id="@+id/jumlah_tiket"
@@ -99,6 +104,7 @@
                     android:ems="10"
                     android:hint="Jumlah Tiket"
                     android:inputType="number"
+                    android:fontFamily="@font/signika_regular"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
 
@@ -109,6 +115,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="21dp"
                     android:text="Data Diri"
+                    android:fontFamily="@font/signika_regular"
                     android:textColor="@android:color/black"
                     android:textSize="19dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:fontFamily="@font/signika_regular"
                     android:ems="10"
                     android:hint="Nama Pembeli"
                     android:inputType="text"
@@ -133,6 +141,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:ems="10"
+                    android:fontFamily="@font/signika_regular"
                     android:hint="Email Pembeli"
                     android:inputType="textEmailAddress"
                     android:singleLine="true"
@@ -146,6 +155,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="15dp"
                     android:ems="10"
+                    android:fontFamily="@font/signika_regular"
                     android:hint="No. Telp Pembeli"
                     android:inputType="phone"
                     android:singleLine="false"
@@ -158,6 +168,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="19dp"
+                    android:fontFamily="@font/signika_regular"
                     android:text="Metode Pembayaran"
                     android:textColor="@android:color/black"
                     android:textSize="19dp"
@@ -170,9 +181,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Pesan Tiket"
+                    android:fontFamily="@font/signika_regular"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                    android:background="@drawable/custom_button"/>
 
             </android.support.constraint.ConstraintLayout>
 
@@ -187,6 +200,7 @@
             android:text="Pemesanan Tiket Wisata"
             android:textColor="@android:color/black"
             android:textSize="20dp"
+            android:fontFamily="@font/signika_regular"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -196,6 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Nama"
+            android:fontFamily="@font/signika_regular"
             android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -206,6 +221,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Tempat"
+            android:fontFamily="@font/signika_regular"
             android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="@+id/nama"
             app:layout_constraintTop_toBottomOf="@+id/nama" />
@@ -216,6 +232,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Date"
+            android:fontFamily="@font/signika_regular"
             android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="@+id/tempat"
             app:layout_constraintTop_toBottomOf="@+id/tempat" />

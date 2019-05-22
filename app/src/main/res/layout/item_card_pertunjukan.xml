@@ -129,9 +129,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginRight="2dp"
                 android:text="@string/favorite"
                 android:textSize="12sp"
-                tools:text="Detail" />
+                tools:text="Detail"
+                android:fontFamily="@font/signika_regular"
+                android:background="@drawable/custom_button"/>
 
             <Button
                 android:id="@+id/btn_set_pesan"
@@ -139,9 +142,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginLeft="2dp"
                 android:text="@string/share"
                 android:textSize="12sp"
-                tools:text="Pesan Tiket" />
+                tools:text="Pesan Tiket"
+                android:fontFamily="@font/signika_regular"
+                android:background="@drawable/custom_button"/>
         </LinearLayout>
     </RelativeLayout>
 </android.support.v7.widget.CardView>

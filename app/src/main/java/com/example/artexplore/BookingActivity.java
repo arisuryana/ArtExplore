@@ -20,6 +20,10 @@ public class BookingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        setActionBarTitle("Tiket Booking");
+
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String total_harga = prefs.getString("total_harga", null);
         String tempat = prefs.getString("tempat", null);
@@ -101,5 +105,15 @@ public class BookingActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    private void setActionBarTitle(String title){
+        getSupportActionBar().setTitle(title);
     }
 }

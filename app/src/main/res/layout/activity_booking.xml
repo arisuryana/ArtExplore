@@ -16,7 +16,8 @@
         android:layout_toRightOf="@id/no_telp1"
         android:layout_marginLeft="50dp"
         android:text="no_telp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/no_telp1"
@@ -27,7 +28,8 @@
         android:layout_marginLeft="10dp"
         android:text="No. Telpon"
         android:textStyle="bold"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/jumlah_tiket"
@@ -38,7 +40,8 @@
         android:text="jumlah_tiket"
         android:layout_toRightOf="@id/jumlah_tiket1"
         android:textSize="18sp"
-       android:layout_below="@id/no_telp" />
+        android:layout_below="@id/no_telp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/jumlah_tiket1"
@@ -49,7 +52,8 @@
         android:text="Jumlah Ticket"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_below="@id/no_telp" />
+        android:layout_below="@id/no_telp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/total_harga"
@@ -60,7 +64,8 @@
         android:text="total_harga"
         android:layout_toRightOf="@id/total_harga1"
         android:textSize="18sp"
-        android:layout_below="@id/jumlah_tiket" />
+        android:layout_below="@id/jumlah_tiket"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/total_harga1"
@@ -71,7 +76,8 @@
         android:text="Total Harga"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_below="@id/jumlah_tiket" />
+        android:layout_below="@id/jumlah_tiket"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/tempat"
@@ -82,7 +88,8 @@
         android:text="tempat"
         android:layout_toRightOf="@id/tempat1"
         android:textSize="18sp"
-        android:layout_below="@id/tanggal" />
+        android:layout_below="@id/tanggal"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/tempat1"
@@ -93,7 +100,8 @@
         android:textStyle="bold"
         android:text="Tempat"
         android:textSize="18sp"
-        android:layout_below="@id/tanggal" />
+        android:layout_below="@id/tanggal"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/tanggal"
@@ -104,7 +112,8 @@
         android:text="tanggal"
         android:layout_toRightOf="@id/tanggal1"
         android:textSize="18sp"
-        android:layout_below="@id/total_harga"/>
+        android:layout_below="@id/total_harga"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/tanggal1"
@@ -115,7 +124,8 @@
         android:text="Tanggal"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_below="@id/total_harga"/>
+        android:layout_below="@id/total_harga"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/nama_pembeli"
@@ -125,7 +135,8 @@
         android:layout_toRightOf="@id/nama_pembeli1"
         android:layout_marginLeft="20dp"
         android:text="nama_pembeli"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/nama_pembeli1"
@@ -135,7 +146,8 @@
         android:text="Nama Pembeli"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/email_pembeli"
@@ -146,7 +158,8 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="8dp"
         android:text="email pembeli"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/email_pembeli1"
@@ -157,7 +170,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
         android:text="Email Pembeli"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/jenis"
@@ -166,25 +180,34 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/signika_regular"/>
 
     <TextView
         android:id="@+id/no_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="130dp"
-        android:gravity="center"
         android:layout_marginTop="320dp"
-        android:text="Tidak ada tiket dibooking" />
+        android:gravity="center"
+        android:text="Tidak ada tiket dibooking"
+        android:fontFamily="@font/signika_regular"/>
 
     <Button
         android:id="@+id/clear_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tempat"
+        android:layout_alignStart="@+id/no_item"
+        android:layout_alignEnd="@+id/no_item"
+        android:layout_marginStart="5dp"
         android:layout_marginLeft="135dp"
         android:layout_marginTop="76dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/custom_button"
         android:gravity="center"
+        android:fontFamily="@font/signika_regular"
         android:text="Sudah ditonton" />
 
 
@@ -193,8 +216,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/clear_button"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="163dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/custom_button"
         android:gravity="center"
+        android:fontFamily="@font/signika_regular"
         android:text="Home" />
 </RelativeLayout>
