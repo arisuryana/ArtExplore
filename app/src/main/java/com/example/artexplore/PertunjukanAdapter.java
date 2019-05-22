@@ -43,7 +43,7 @@ public class PertunjukanAdapter extends Adapter<PertunjukanAdapter.CardViewViewH
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PertunjukanAdapter.CardViewViewHolder cardViewViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final PertunjukanAdapter.CardViewViewHolder cardViewViewHolder, final int i) {
         Pertunjukan p = getListPertunjukan().get(i);
         Glide.with(context)
                 .load(p.getPhoto())
@@ -58,6 +58,17 @@ public class PertunjukanAdapter extends Adapter<PertunjukanAdapter.CardViewViewH
             @Override
             public void onItemClicked(View view, int position) {
                 Toast.makeText(context, "Detail dari "+getListPertunjukan().get(position).getJudul(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(context, activity_detail.class);
+                intent.putExtra("image_url",getListPertunjukan().get(position).getPhoto());
+                intent.putExtra("judul",getListPertunjukan().get(position).getJudul());
+                intent.putExtra("lokasi",getListPertunjukan().get(position).getLokasi());
+                intent.putExtra("hargaReg",getListPertunjukan().get(position).getHarga_reg());
+                intent.putExtra("hargaVip",getListPertunjukan().get(position).getHarga_vip());
+                intent.putExtra("desc",getListPertunjukan().get(position).getDeskripsi());
+                intent.putExtra("tanggal",getListPertunjukan().get(position).getTanggal());
+                context.startActivity(intent);
+
             }
         }));
         cardViewViewHolder.btnTiket.setOnClickListener(new CustomOnItemClickListener(i, new CustomOnItemClickListener.OnItemClickCallback() {

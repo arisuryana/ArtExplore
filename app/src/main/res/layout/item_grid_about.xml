@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/signika_semibold"
                 android:text="Nama Anggota"
-                android:textColor="#000000"
+                android:textColor="#ffffff"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/signika_regular"
                 android:text="Nim"
-                android:textColor="#000000"
+                android:textColor="#ffffff"
                 android:textSize="15dp" />
 
         </LinearLayout>

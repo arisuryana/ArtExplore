@@ -70,10 +70,10 @@
             android:layout_below="@id/tv_item_tanggal"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="5dp"
             android:textColor="@android:color/black"
             android:fontFamily="@font/signika_regular"
-            tools:text="@string/regulartiket" />
+            android:text="Ticket Reguler"/>
 
         <TextView
             android:id="@+id/tv_item_remarks2"
@@ -81,12 +81,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_item_tanggal"
             android:layout_toRightOf="@id/tv_item_remarks1"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="94dp"
             android:layout_marginRight="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="5dp"
             android:textColor="@android:color/black"
             android:fontFamily="@font/signika_regular"
-            tools:text="@string/viptiket" />
+            android:text="Ticket VIP"/>
 
         <TextView
             android:id="@+id/tv_item_regular"
@@ -96,6 +96,7 @@
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/activity_vertical_margin"
             android:layout_marginBottom="1dp"
+            android:textStyle="bold"
             android:textColor="@android:color/black"
             android:fontFamily="@font/signika_regular"
             tools:text="Regular Tiket" />
@@ -104,10 +105,9 @@
             android:id="@+id/tv_item_vip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:layout_below="@id/tv_item_remarks2"
-            android:layout_toRightOf="@id/tv_item_regular"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="201dp"
             android:layout_marginBottom="1dp"
             android:textColor="@android:color/black"
             android:fontFamily="@font/signika_regular"
