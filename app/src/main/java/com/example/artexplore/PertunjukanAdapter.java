@@ -74,9 +74,13 @@ public class PertunjukanAdapter extends Adapter<PertunjukanAdapter.CardViewViewH
         cardViewViewHolder.btnTiket.setOnClickListener(new CustomOnItemClickListener(i, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override
             public void onItemClicked(View view, int position) {
-                String value="Hello world";
+                Pertunjukan selected = getListPertunjukan().get(position);
                 Intent paymentIntent = new Intent(context, PaymentActivity.class);
-                paymentIntent.putExtra("key",value);
+                paymentIntent.putExtra("nama",selected.getJudul());
+                paymentIntent.putExtra("tempat",selected.getLokasi());
+                paymentIntent.putExtra("tanggal",selected.getTanggal());
+                paymentIntent.putExtra("vip",selected.getHarga_vip());
+                paymentIntent.putExtra("reguler",selected.getHarga_reg());
                 context.startActivity(paymentIntent);
             }
         }));

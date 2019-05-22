@@ -13,6 +13,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity_detail"></activity>
         <activity android:name=".AboutActivity" />
+        <activity android:name=".BookingActivity"></activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".PertunjukanActivity" />
         <activity android:name=".LokasiActivity" />
         <activity android:name=".DaerahActivity" />
