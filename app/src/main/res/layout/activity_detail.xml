@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_detail">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_det"
+        android:layout_margin="2dp"
+        android:scaleType="centerCrop"
+        android:src="@color/cardview_dark_background"/>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_det"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/signika_semibold"
+        android:text="testing"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/lokasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:layout_below="@id/judul"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="testing"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:layout_below="@id/lokasi"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="testing"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/hargaVIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/tanggal"
+        android:layout_toRightOf="@id/hargareguler"
+        android:fontFamily="@font/signika_regular"
+        android:text="Ticket VIP"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/hargareguler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/tanggal"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="Ticket Reguler"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/hargareguler2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/hargareguler"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="testing"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/hargaVIP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/hargaVIP"
+        android:layout_toRightOf="@id/hargareguler2"
+        android:layout_marginLeft="151dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="testing"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/hargareguler2">
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/signika_regular"
+            android:text="testing"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
