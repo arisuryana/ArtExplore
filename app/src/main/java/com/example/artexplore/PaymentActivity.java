@@ -85,6 +85,7 @@ public class PaymentActivity extends AppCompatActivity {
                     editor.putString("total_harga",totalHarga);
                     editor.putString("tempat",tempat);
                     editor.putString("tanggal",tanggal);
+                    editor.putString("jenis",ticket);
                     editor.commit();
                     Intent intent = new Intent(context, BookingActivity.class);
                     startActivity(intent);
