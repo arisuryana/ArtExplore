@@ -18,4 +18,6 @@
     <string name="menu_about">About Us</string>
     <string name="favorite">Detail</string>
     <string name="share">Pesan Tiket</string>
+    <string name="viptiket">VIP Tiket</string>
+    <string name="regulartiket">Regular Tiket</string>
 </resources>

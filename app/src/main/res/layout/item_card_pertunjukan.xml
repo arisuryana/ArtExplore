@@ -73,7 +73,7 @@
             android:layout_marginBottom="1dp"
             android:textColor="@android:color/black"
             android:fontFamily="@font/signika_regular"
-            tools:text="Regular Tiket" />
+            tools:text="@string/regulartiket" />
 
         <TextView
             android:id="@+id/tv_item_remarks2"
@@ -86,7 +86,7 @@
             android:layout_marginBottom="1dp"
             android:textColor="@android:color/black"
             android:fontFamily="@font/signika_regular"
-            tools:text="VIP Tiket" />
+            tools:text="@string/viptiket" />
 
         <TextView
             android:id="@+id/tv_item_regular"

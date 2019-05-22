@@ -1,6 +1,7 @@
 package com.example.artexplore;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
@@ -40,12 +41,22 @@ public class GridDaerahAdapter extends Adapter<GridDaerahAdapter.GridViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull GridViewHolder holder, final int position) {
         holder.tvName.setText(getListDaerah().get(position).getNama_daerah());
         Glide.with(context)
                 .load(getListDaerah().get(position).getPhoto_daerah())
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
+
+        holder.imgPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PertunjukanActivity.class);
+                intent.putExtra("daerah", getListDaerah().get(position).getNama_daerah());
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override

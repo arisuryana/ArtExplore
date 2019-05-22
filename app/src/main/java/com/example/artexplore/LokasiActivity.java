@@ -26,6 +26,9 @@ public class LokasiActivity extends AppCompatActivity {
         rvCategory1 = findViewById(R.id.rv_category1);
         rvCategory1.setHasFixedSize(true);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         if (savedInstanceState == null) {
             setActionBarTitle("Lokasi Pertunjukan");
             list.addAll(LokasiData.getListData());
@@ -60,6 +63,12 @@ public class LokasiActivity extends AppCompatActivity {
 
     private void showSelectedLokasi(Lokasi lokasi) {
         Toast.makeText(this, "Kamu memilih Lokasi " + lokasi.getNama_lokasi(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }

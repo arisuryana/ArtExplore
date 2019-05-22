@@ -7,6 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,9 @@ public class DaerahActivity extends AppCompatActivity {
 
         rvCategory = findViewById(R.id.rv_category);
         rvCategory.setHasFixedSize(true);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         if (savedInstanceState == null) {
             setActionBarTitle("Daerah Pertunjukan");
@@ -61,5 +65,12 @@ public class DaerahActivity extends AppCompatActivity {
 
     private void showSelectedDaerah(Daerah daerah) {
         Toast.makeText(this, "Kamu memilih Daerah " + daerah.getNama_daerah(), Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

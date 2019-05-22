@@ -1,5 +1,6 @@
 package com.example.artexplore;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -17,6 +18,8 @@ public class PertunjukanActivity extends AppCompatActivity {
     final String STATE_LIST = "state_list";
     final String STATE_MODE = "state_mode";
     int mode;
+    String daerah;
+    String lokasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +29,40 @@ public class PertunjukanActivity extends AppCompatActivity {
         rvCategory2 = findViewById(R.id.rv_category2);
         rvCategory2.setHasFixedSize(true);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        Intent intent = getIntent();
+        if (getIntent().getStringExtra("daerah") != null){
+            daerah = intent.getStringExtra("daerah");
+        }
+
+        if (getIntent().getStringExtra("lokasi") != null){
+            lokasi = intent.getStringExtra("lokasi");
+        }
+
         if (savedInstanceState == null) {
             setActionBarTitle("Daftar Pertunjukan");
-            list.addAll(PertunjukanData.getListData());
+            if(daerah != null){
+                for (int i=0; i<PertunjukanData.getListData().size();i++){
+                    if (PertunjukanData.getListData().get(i).getDaerah().equals(daerah)){
+                        list.add(PertunjukanData.getListData().get(i));
+                    }
+                }
+
+            }else if(lokasi != null) {
+                for(int i=0; i<PertunjukanData.getListData().size();i++){
+                    if (PertunjukanData.getListData().get(i).getLokasi().equals(lokasi)){
+                        list.add(PertunjukanData.getListData().get(i));
+                    }
+                }
+            }else {
+                list.addAll(PertunjukanData.getListData());
+            }
+
+
+
+
             showRecyclerCard();
             mode = R.id.nav_pertunjukan;
         } else {
@@ -36,6 +70,7 @@ public class PertunjukanActivity extends AppCompatActivity {
             ArrayList<Pertunjukan> stateList = savedInstanceState.getParcelableArrayList(STATE_LIST);
             int stateMode = savedInstanceState.getInt(STATE_MODE);
             setActionBarTitle(stateTitle);
+
             list.addAll(stateList);
         }
 
@@ -60,6 +95,12 @@ public class PertunjukanActivity extends AppCompatActivity {
         outState.putString(STATE_TITLE, getSupportActionBar().getTitle().toString());
         outState.putParcelableArrayList(STATE_LIST, list);
         outState.putInt(STATE_MODE, mode);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }

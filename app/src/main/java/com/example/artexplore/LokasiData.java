@@ -11,7 +11,7 @@ public class LokasiData {
             {"Taman Budaya NTB", "Lombok, NTB", "https://matramantra.files.wordpress.com/2013/05/ntb.jpg"},
             {"Pantai Seger", "Lombok, NTB", "https://phinemo.com/wp-content/uploads/2018/04/Pemandangan-yang-tenang-dari-Pantai-Kuta-bagian-dari-kawasan-wisata-Mandalika-di-Lombok-Nusa-Tenggara-Barat@Shutterstock.jpg"},
             {"Desa Sade", "Lombok, NTB", "https://2.bp.blogspot.com/-ueqCFn10mIo/WI7M3eAMWhI/AAAAAAAAF94/9nWFIMM-TlEC1_9kDyfdbpzZHvvKcI4qwCLcB/s1600/_MG_1386.JPG"},
-            {"Panggung Terbuka Prambanan", "Candi Prambanan, Yogyakarta", "http://resources.mynewsdesk.com/image/upload/t_limit_1000/uz1qth8pfuige8nofpul.jpg"},
+            {"Panggung Prambanan", "Candi Prambanan, Yogyakarta", "http://resources.mynewsdesk.com/image/upload/t_limit_1000/uz1qth8pfuige8nofpul.jpg"},
             {"Museum Senobudoyo", "Daerah Istimewa Yogyakarta", "http://wargajogja.net/wp-content/uploads/2017/09/IMG_0246-3-1024x683.jpg"},
             {"Candi Borobudur", "Magelang, Yogyakarta", "https://alaransel.com/wp-content/uploads/2012/11/JOGJA-PACKAGE-TOUR.jpg"},
     };

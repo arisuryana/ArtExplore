@@ -1,6 +1,7 @@
 package com.example.artexplore;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
@@ -40,13 +41,22 @@ public class GridLokasiAdapter extends Adapter<GridLokasiAdapter.GridViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull GridViewHolder holder, final int position) {
         holder.tvName.setText(getListLokasi().get(position).getNama_lokasi());
         holder.tvName2.setText(getListLokasi().get(position).getNama_daerah());
         Glide.with(context)
                 .load(getListLokasi().get(position).getPhoto_lokasi())
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
+
+        holder.imgPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PertunjukanActivity.class);
+                intent.putExtra("lokasi", getListLokasi().get(position).getNama_lokasi());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
