@@ -63,7 +63,10 @@ public class PertunjukanAdapter extends Adapter<PertunjukanAdapter.CardViewViewH
         cardViewViewHolder.btnTiket.setOnClickListener(new CustomOnItemClickListener(i, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override
             public void onItemClicked(View view, int position) {
-                Toast.makeText(context, "Memesan Tiket "+getListPertunjukan().get(position).getJudul(), Toast.LENGTH_SHORT).show();
+                String value="Hello world";
+                Intent paymentIntent = new Intent(context, PaymentActivity.class);
+                paymentIntent.putExtra("key",value);
+                context.startActivity(paymentIntent);
             }
         }));
     }

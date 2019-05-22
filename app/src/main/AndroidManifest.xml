@@ -15,6 +15,7 @@
         <activity android:name=".PertunjukanActivity" />
         <activity android:name=".LokasiActivity" />
         <activity android:name=".DaerahActivity" />
+        <activity android:name=".PaymentActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
